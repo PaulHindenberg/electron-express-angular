@@ -10,10 +10,10 @@ const path = require('path')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+function createWindow() {
 
   // launch the express server
-  app.server = require(path.join(__dirname, '/express/app.js'))();
+  app.server = require(path.join(__dirname, '/expressApp/app.js'))();
 
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -24,7 +24,7 @@ function createWindow () {
   })
 
   // Visit the express server page
-  mainWindow.loadURL('http://localhost:3000/');
+  mainWindow.loadURL('http://localhost:3001/');
   mainWindow.focus();
 
   // Open the DevTools.
